@@ -26,6 +26,9 @@ Python provides several built-in data types designed for storing and manipulatin
 
 ## Operations and Expressions:
 
+With the above data types, you can perform a variety of operations in Python, including arithmetic, comparison, and logical operations.
+Expressions can also be used to manipulate data, such as combining multiple values into a new value.
+
 Arithmetic Operations:
 
 Addition (+): Combining numbers, like 3 + 5.
@@ -51,18 +54,17 @@ not: Returns True if the condition after it is false, and vice versa.
 
 Expressions:
 
-These are combinations of values, variables, and operators that can be evaluated to produce a result. For example, 2×(3+4)
-2×(3+4) is an expression.
+These are combinations of values, variables, and operators that can be evaluated to produce a result. For example, 2×(3+4). 2×(3+4) is an expression.
 
 ## Variables:
 
-variables are used to store and manage data. A variable is essentially a name assigned to a memory location that holds a value. When you create a variable, you are allocating space in memory to store data, and you can later reference that data using the variable name. Python is dynamically typed, meaning you don't need to explicitly declare the data type of a variable; Python infers it based on the assigned value.
+Variables are used to store and manage data. A variable is essentially a name assigned to a memory location that holds a value. When you create a variable, you are allocating space in memory to store data, and you can later reference that data using the variable name. Python is dynamically typed, meaning you don't need to explicitly declare the data type of a variable; Python infers it based on the assigned value.
 
 Here's a basic example of variable usage in Python:
 ```
 # Variable assignment
 age = 20
-name = "chris"
+name = "Chris"
 height = 1.95
 ```
 
