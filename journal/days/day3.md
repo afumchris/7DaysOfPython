@@ -85,7 +85,67 @@ print(my_set.difference(other_set))  # {1, 2}
 ```
 
 ## Object Oriented Programming:
+Object-oriented programming (OOP) in python are concepts used to structure code into reusable and modular components, in addition to data structures. Here are some of the most important OOP concepts to understand:
 
+### Class
+
+A class is a template for creating objects. A class specifies the attributes (data) and methods (functions) that a class's objects can have. Classes are defined using the `class` keyword, and objects are created using the class constructor. Here's an example of defining a `Person` class and creating an object of that class:
+
+``` python
+class Person:
+    def __init__(self, name, country):
+        self.name = name
+        self.country = country
+person = Person("Chris", "Nigeria")
+print(person.name)   # OUTPUT "Chris"
+print(person.country)    # OUTPUT "Nigeria"
+```
+
+### Inheritance:
+
+Inheritance is a technique for creating a new class from an existing one. The new class, known as a subclass, inherits the attributes and methods of the existing superclass.
+Subclasses can extend or override the superclass's attributes and methods to create new functionality. Here's an example of defining a `Person` subclass called `Student`:
+
+``` python
+class Student(Person):
+    def __init__(self, name, country, major):
+        super().__init__(name, country)
+        self.major = major
+
+student = Student("Chris", "Nigeria", "Animal Science")
+print(student.name)   # OUTPUT "Chris"
+print(student.country)    # OUTPUT "Nigeria"
+print(student.major)  # OUTPUT "Animal Science"
+```
+
+### Polymorphism:
+
+Polymorphism refers to the ability of objects to take on different forms or behaviors depending on their context.
+Polymorphism can be achieved by using inheritance and method overriding, as well as abstract classes and interfaces. Here's an example of a speak() method being implemented in both the Person and Student classes:
+
+``` python
+class Person:
+    def __init__(self, name, country):
+        self.name = name
+        self.country = country
+
+    def speak(self):
+        print("Hello, my name is {} and I am from {}.".format(self.name, self.country))
+
+class Student(Person):
+    def __init__(self, name, country, major):
+        super().__init__(name, country)
+        self.major = major
+
+    def speak(self):
+        print("Hello, my name is {} and I am a {} major.".format(self.name, self.major))
+
+person = Person("Chris", "Nigeria")
+student = Student("Jummai", "Nigeria", "Journalism")
+
+person.speak()   # "Hello, my name is Chris and I am from Nigeria."
+student.speak()  # "Hello, my name is Jummai and I am a Journalism major."
+```
 
 
 
