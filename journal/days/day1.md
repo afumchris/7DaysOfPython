@@ -1,6 +1,6 @@
 # Day 1 - Introduction to Python
 
-In the late 1980s, Python was conceived by Guido van Rossum as a high-level, interpreted, and dynamic programming language. Its extensive usage spans various domains such as web development, devops, data analysis, alongside applications in artificial intelligence and machine learning
+In the late 1980s, Python was created by Guido van Rossum as a high-level, interpreted, and dynamic programming language. Its extensive usage spans various domains such as web development, devops, data analysis, alongside applications in artificial intelligence and machine learning
 
 ## Installation and Setting up the Environment:
 
