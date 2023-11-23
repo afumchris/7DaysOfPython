@@ -5,6 +5,7 @@ Welcome to the second day of Python, and today we will cover some more concepts:
 - Functions
 - Modules and libraries
 - File I/O
+- Exception Handling
 
 ## Loops (for/while):
 
@@ -82,6 +83,58 @@ add_numbers(5, 2)
 ```
 
 ## Understanding Modules and Importing Libraries:
+
+Modules: Files containing Python code, which can define functions, variables, and classes. You can use them in other programs.
+Libraries: Collections of modules. They provide pre-written code for common tasks.
+Additional libraries can be installed using package managers like pip.
+You must import a module or library using the import statement in order to use it in your programme.
+
+Example:
+```python
+import math
+result = math.sqrt(25)
+```
+
+output
+```
+5.0
+```
+
+## File I/O
+
+File I/O is used to read and write data to and from files on disk.
+The built-in Python function open() can be used to open a file, after which you can read from and write to it using methods like read() and write().
+To save system resources, you should always close the file after you are done with it.
+
+Example of reading from a file:
+```python
+f = open("examplefile.txt", "r")
+print(f.read())
+f.close()
+```
+
+Example of writing to a file:
+```python
+f = open("example.txt", "a")
+f.write("Now the file has more content!")
+f.close()
+```
+
+## Exception Handling:
+
+Exceptions are runtime errors that happen when your programme runs into unexpected circumstances, such dividing by zero or attempting to access a list element that doesn't exist.
+Using a try/except block, you can manage exceptions in Python. The try block's code is run, and if an exception arises, the except block's code is run to handle the exception.
+
+``` python
+try:
+  f = open("example.txt")
+  try:
+    f.write("Python is great")
+  except:
+    print("Something went wrong when writing to the file")
+```
+
+
 
 
 
