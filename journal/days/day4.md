@@ -86,6 +86,55 @@ Testing helps ensure that your code works correctly and allows you to catch and 
 Regular expressions (regex or regexp) provide a powerful way to search, match, and manipulate text patterns. The provided Python code demonstrates the use of regular expressions using the re module.
 
 
+``` python
+import re
+
+# Search for a phone number in a string
+text = 'My phone number is 555-7777'
+match = re.search(r'\d{3}-\d{4}', text)
+if match:
+    print(match.group(0))
+
+# Extract email addresses from a string
+text = 'My email is example@devops.com, but I also use other@cloud.com'
+matches = re.findall(r'\S+@\S+', text)
+print(matches)
+```
+
+Output:
+
+``` bash
+555-7777
+['example@devops.com,', 'other@cloud.com']
+```
+
+Here's a breakdown:
+
+  - Importing the `re` Module: `import re`, This line imports the `re` module, which provides support for regular expressions in Python.
+  - Searching for a Phone Number:
+    
+     ```python
+     text = 'My phone number is 555-7777'
+     match = re.search(r'\d{3}-\d{4}', text)
+     if match:
+     print(match.group(0))
+     ```
+       - `text = 'My phone number is 555-7777'`, Initializes a string variable text containing a sentence with a phone number.
+       - `re.search(r'\d{3}-\d{4}', text)`, Uses `re.search` to look for a pattern in the text. The pattern `\d{3}-\d{4}` matches three digits, a hyphen, and four more digits (a common format for phone numbers). The result is stored in the `match` variable.
+       - `if match: print(match.group(0))`, Checks if a match was found. If yes, it prints the matched phone number using `match.group(0)`.
+   
+  - Extracting Email Addresses:
+
+    ```python
+    text = 'My email is example@devops.com, but I also use other@cloud.com'
+    matches = re.findall(r'\S+@\S+', text)
+    print(matches)
+    ```
+    
+
+
+
+
 
 
 
