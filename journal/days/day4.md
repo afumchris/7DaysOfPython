@@ -130,6 +130,18 @@ Here's a breakdown:
     matches = re.findall(r'\S+@\S+', text)
     print(matches)
     ```
+      - `text = 'My email is example@devops.com, but I also use other@cloud.com'`, Initializes another string variable `text` containing a sentence with email addresses.
+      - `re.findall(r'\S+@\S+', text)`, Uses `re.findall` to find all occurrences of email addresses in the text. The pattern `\S+@\S+` matches one or more non-whitespace characters, followed by an '@' symbol, and then one or more non-whitespace characters again.
+      - `print(matches)`, Prints all the email addresses found in the text.
+   
+  - Output:
+    
+    ```python
+    555-7777
+    ['example@devops.com,', 'other@cloud.com']
+    ```
+    
+The output demonstrates that the code successfully found and printed a phone number and a list of email addresses based on the specified patterns in the given strings. The regular expressions used in this code are powerful tools for pattern matching within text data.
     
 
 
