@@ -188,10 +188,32 @@ The provided Python code demonstrates the usage of the datetime module for worki
     date = datetime(2023, 2, 1, 12, 0)
     print(date)
     ```
-    - `datetime(2023, 2, 1, 12, 0)`: This line creates a `datetime` object representing the date February 1, 2023, at 12:00 PM.
-    - `print(date)`: It prints the specified date and time.
+      - `datetime(2023, 2, 1, 12, 0)`: This line creates a `datetime` object representing the date February 1, 2023, at 12:00 PM.
+      - `print(date)`: It prints the specified date and time.
    
-    - 
+  - Calculating the Difference Between Two Dates:
+    ```python
+    delta = now - date
+    print(delta)
+    ```
+      - `now - date`: This calculates the time difference between the current date and time (`now`) and the specified date and time (`date`).
+      - `print(delta)`: It prints the time difference in days, hours, minutes, seconds, and microseconds.
+   
+  - Output:
+    ```bash
+    2023-02-17 11:33:27.257712
+    2023-02-01 12:00:00
+    15 days, 23:33:27.257712
+    ```
+
+The output demonstrates the current date and time, a specific date and time created using `datetime`, and the time difference (timedelta) between the two. The `datetime` module is powerful for handling various aspects of date and time in Python.
+
+## Resources
+
+- [pdb - The Python Debugger](https://docs.python.org/3/library/pdb.html)
+- [re - Regular expressions operations](https://docs.python.org/3/library/re.html)
+- [datetime - Basic date and time types](https://docs.python.org/3/library/datetime.html)
+
 
 
 
