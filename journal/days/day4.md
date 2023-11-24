@@ -142,7 +142,57 @@ Here's a breakdown:
     ```
     
 The output demonstrates that the code successfully found and printed a phone number and a list of email addresses based on the specified patterns in the given strings. The regular expressions used in this code are powerful tools for pattern matching within text data.
-    
+
+## Datetime library:
+
+As the name suggests, Python's `datetime` module allows you to work with dates and times in your code. It includes functions for formatting and manipulating date and time data, as well as classes for representing dates, times, and time intervals.
+The datetime module, for example, can be used to get the current date and time, calculate the difference between two dates, or convert between different date and time formats.
+
+``` python
+from datetime import datetime, timedelta
+
+# Get the current date and time
+now = datetime.now()
+print(now) # Output: 2023-02-17 11:33:27.257712
+
+# Create a datetime object for a specific date and time
+date = datetime(2023, 2, 1, 12, 0)
+print(date) # Output: 2023-02-01 12:00:00
+
+# Calculate the difference between two dates
+delta = now - date
+print(delta) # Output: 15 days, 23:33:27.257712
+```
+
+Output:
+
+``` bash
+2023-02-17 11:33:27.257712
+2023-02-01 12:00:00
+15 days, 23:33:27.257712
+```
+
+The provided Python code demonstrates the usage of the datetime module for working with dates and times. Below is the breakdown:
+
+  - Importing `datetime` and `timedelta` Classes: `from datetime import datetime, timedelta`, This line imports the `datetime` class and the `timedelta` class from the `datetime module`. datetime is used for representing dates and times, and `timedelta` is used for representing time intervals.
+  - Getting the Current Date and Time:
+    ```python
+    now = datetime.now()
+    print(now)
+    ```
+      - `datetime.now()`: This function returns a `datetime` object representing the current date and time.
+      - `print(now)`: It prints the current date and time. The output format includes the year, month, day, hour, minute, second, and microsecond.
+
+  - Creating a Datetime Object for a Specific Date and Time:
+    ```python
+    date = datetime(2023, 2, 1, 12, 0)
+    print(date)
+    ```
+    - `datetime(2023, 2, 1, 12, 0)`: This line creates a `datetime` object representing the date February 1, 2023, at 12:00 PM.
+    - `print(date)`: It prints the specified date and time.
+   
+    - 
+
 
 
 
