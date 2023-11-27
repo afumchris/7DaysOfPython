@@ -23,7 +23,6 @@ This code creates a Flask application and defines a single route for the root UR
   - Importing Flask: `from flask import Flask`, This line imports the `Flask` class from the Flask module. Flask is a web framework for Python.
   - Creating an Application Instance: `app = Flask(__name__)`, This line creates an instance of the Flask class, typically named `app`. The `__name__` argument is used to determine the root path for the application.
   - Defining a Route and a View Function:
-
     ```python
     @app.route('/')
     def hello_world():
@@ -31,6 +30,35 @@ This code creates a Flask application and defines a single route for the root UR
     ```
       - `@app.route('/')`: This is a decorator that associates the URL path `'/'` with the `hello_world` function. When a user accesses the root path of the application (e.g., `http://localhost:5000/`), Flask will invoke the associated function.
       - `def hello_world():`: This is a view function that will be executed when the specified route is accessed. In this case, it returns the string `'Hello, World!'`.
+
+
+## Working with databases:
+
+The majority of online applications need some sort of permanent storage, and Python offers a number of modules and frameworks for doing so. Popular options include Django ORM, Peewee, and SQLAlchemy. Here is an illustration of how to work with a SQLite database using SQLAlchemy:
+
+``` python
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+db = SQLAlchemy(app)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+
+@app.route('/')
+def index():
+    users = User.query.all()
+    return render_template('index.html', users=users)
+```
+This code creates a SQLite database and a User table using SQLAlchemy. The index() function queries the database for all users and passes them to the template for rendering.
+
+   
+
+
+    
 
 
 
