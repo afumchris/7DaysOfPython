@@ -18,5 +18,19 @@ def hello_world():
     return 'Hello, World!' 
 ```
 
+This code creates a Flask application and defines a single route for the root URL (/). When the user visits the URL, the hello_world() function is called and returns the string 'Hello, World!'. Below is the codes breakdown:
+
+  - Importing Flask: `from flask import Flask`, This line imports the `Flask` class from the Flask module. Flask is a web framework for Python.
+  - Creating an Application Instance: `app = Flask(__name__)`, This line creates an instance of the Flask class, typically named `app`. The `__name__` argument is used to determine the root path for the application.
+  - Defining a Route and a View Function:
+
+    ```python
+    @app.route('/')
+    def hello_world():
+    return 'Hello, World!'
+    ```
+      - `@app.route('/')`: This is a decorator that associates the URL path `'/'` with the `hello_world` function. When a user accesses the root path of the application (e.g., `http://localhost:5000/`), Flask will invoke the associated function.
+      - `def hello_world():`: This is a view function that will be executed when the specified route is accessed. In this case, it returns the string `'Hello, World!'`.
+
 
 
